@@ -6,27 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahsa Mirarab | Backend Engineer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 :root{
-    --bg:#0b0f19;
-    --card:#121826;
-    --text:#f8fafc;
-    --muted:#94a3b8;
-    --accent:#60a5fa;
-    --border:#1e293b;
-}
-
-body.light{
+    --primary:#2563eb;
+    --text:#1e293b;
+    --muted:#64748b;
     --bg:#f8fafc;
     --card:#ffffff;
-    --text:#0f172a;
-    --muted:#475569;
-    --accent:#2563eb;
-    --border:#e2e8f0;
 }
 
 *{
@@ -35,194 +21,85 @@ body.light{
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Inter',sans-serif;
+    font-family:Inter,Segoe UI,sans-serif;
     background:var(--bg);
     color:var(--text);
-    transition:.4s;
-    overflow-x:hidden;
-}
-
-body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(96,165,250,.15),transparent 30%),
-    radial-gradient(circle at 80% 40%,rgba(139,92,246,.15),transparent 30%),
-    radial-gradient(circle at 50% 80%,rgba(59,130,246,.1),transparent 30%);
-    z-index:-1;
-    animation:float 12s ease-in-out infinite alternate;
-}
-
-@keyframes float{
-    from{transform:translateY(0)}
-    to{transform:translateY(-40px)}
+    line-height:1.7;
 }
 
 .container{
-    width:min(1100px,90%);
+    max-width:1000px;
     margin:auto;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:24px 0;
-}
-
-.logo{
-    font-weight:800;
-    letter-spacing:.5px;
-}
-
-.theme-btn{
-    background:var(--card);
-    border:1px solid var(--border);
-    color:var(--text);
-    padding:10px 16px;
-    border-radius:12px;
-    cursor:pointer;
+    padding:60px 24px;
 }
 
 .hero{
-    min-height:85vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    margin-bottom:70px;
 }
 
-.badge{
-    color:var(--accent);
-    margin-bottom:16px;
-    font-weight:600;
-}
-
-h1{
-    font-size:clamp(3rem,8vw,6rem);
-    line-height:1;
-    margin-bottom:20px;
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 .hero p{
-    max-width:750px;
-    font-size:1.2rem;
     color:var(--muted);
-    line-height:1.8;
+    font-size:1.2rem;
 }
 
 .links{
-    display:flex;
-    gap:16px;
-    margin-top:32px;
-    flex-wrap:wrap;
+    margin-top:20px;
 }
 
-.btn{
+.links a{
     text-decoration:none;
-    color:white;
-    background:var(--accent);
-    padding:14px 22px;
-    border-radius:14px;
+    color:var(--primary);
+    margin-right:20px;
     font-weight:600;
 }
 
-.btn-outline{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--border);
-    background:var(--card);
-    padding:14px 22px;
-    border-radius:14px;
-}
-
 section{
-    margin:100px 0;
+    background:var(--card);
+    padding:30px;
+    border-radius:16px;
+    margin-bottom:24px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 
-.section-title{
-    font-size:2rem;
-    margin-bottom:32px;
+h2{
+    margin-bottom:20px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
+ul{
+    padding-left:20px;
 }
 
-.card{
-    background:rgba(255,255,255,.03);
-    backdrop-filter:blur(10px);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:24px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-}
-
-.card h3{
-    margin-bottom:12px;
-}
-
-.card p{
-    color:var(--muted);
-}
-
-.timeline{
-    border-left:2px solid var(--border);
-    padding-left:30px;
-}
-
-.timeline-item{
-    margin-bottom:40px;
-}
-
-.timeline-item h3{
-    margin-bottom:8px;
-}
-
-.timeline-item span{
-    color:var(--accent);
-    font-size:.9rem;
+li{
+    margin-bottom:10px;
 }
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:12px;
+    gap:10px;
 }
 
 .skill{
-    padding:10px 14px;
-    border-radius:12px;
-    border:1px solid var(--border);
-    background:var(--card);
+    padding:8px 14px;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+}
+
+.company{
+    color:var(--muted);
+    margin-bottom:15px;
 }
 
 footer{
     text-align:center;
-    padding:80px 0;
+    margin-top:40px;
     color:var(--muted);
-}
-
-.fade{
-    opacity:0;
-    transform:translateY(20px);
-    transition:.8s;
-}
-
-.fade.show{
-    opacity:1;
-    transform:none;
 }
 </style>
 
@@ -232,196 +109,104 @@ footer{
 
 <div class="container">
 
-<nav>
-<div class="logo">Mahsa Mirarab</div>
-<button class="theme-btn" onclick="toggleTheme()">☀️ / 🌙</button>
-</nav>
+<div class="hero">
+    <h1>Mahsa Mirarab</h1>
+    <p>Backend Engineer • AI Systems • Python</p>
 
-<section class="hero fade">
-
-<div class="badge">
-Backend Engineer • AI Systems
-</div>
-
-<h1>
-Building Reliable<br>
-AI Infrastructure
-</h1>
-
-<p>
-Backend Engineer with production experience building AI-powered services using Python, FastAPI, and Django.
-
-Focused on scalable architectures, asynchronous processing, clean system design, and the infrastructure behind intelligent products.
-
-</p>
-
+```
 <div class="links">
-<a class="btn" href="https://github.com/mahsamirarab" target="_blank">GitHub</a>
-<a class="btn-outline" href="mailto:your-email@example.com">Contact</a>
+    <a href="mahsa.mirarab1382@gmail.com">Email</a>
+    <a href="https://github.com/mahsaMirarab">GitHub</a>
+    <a href="https://www.linkedin.com/in/mahsa-mirarab-b995b4360/">LinkedIn</a>
+</div>
+```
+
 </div>
 
-</section>
+<section>
+<h2>Profile</h2>
 
-<section class="fade">
-
-<h2 class="section-title">About</h2>
-
-<div class="card">
 <p>
-I build the backend systems that power intelligent applications.
+Backend Engineer with production experience building AI-powered platforms using
+Python, Django REST Framework, and FastAPI.
 
-My work focuses on designing reliable services for Large Language Models, OCR pipelines, Speech Recognition, Text-to-Speech engines, image processing workflows, and speaker diarization systems.
+Experienced in designing scalable backend systems for Large Language Models (LLMs),
+Text-to-Speech (TTS), Automatic Speech Recognition (ASR), Optical Character Recognition (OCR), Image Processing,
+and Speaker Diarization services.
 
-I enjoy understanding technologies through official documentation, exploring source code, and transforming complex ideas into maintainable production software.
-
-</p>
-</div>
-
-</section>
-
-<section class="fade">
-
-<h2 class="section-title">Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Backend Engineer — AI.Ferdowsi.Cloud</h3>
-<span>2024 — Present</span>
-
-<p style="margin-top:12px;color:var(--muted)">
-Designed and implemented production-grade backend services using Django REST Framework and FastAPI.
-
-Built APIs and processing pipelines for LLM, OCR, TTS, ASR, image-processing, and speaker-diarization systems.
-
-Designed database schemas, implemented asynchronous workloads with Celery and Redis, and contributed to production deployments and system reliability.
+Strong focus on clean architecture, database design, asynchronous processing,
+and building reliable systems for production environments. Passionate about
+learning technologies through official documentation, source code exploration,
+and close collaboration with engineering teams.
 
 </p>
-</div>
-
-</div>
 
 </section>
 
-<section class="fade">
+<section>
+<h2>Experience</h2>
 
-<h2 class="section-title">AI Services</h2>
+<h3>Backend Engineer</h3>
+<p class="company">AI.Ferdowsi.Cloud • 2025 – Present</p>
 
-<div class="grid">
+<ul>
+<li>Designed and implemented production-grade backend services using Django REST Framework and FastAPI.</li>
 
-<div class="card">
-<h3>🧠 Large Language Models</h3>
-<p>Backend integrations, orchestration, and production APIs.</p>
-</div>
+<li>Built APIs and orchestration layers for LLM, OCR, TTS, ASR, image-processing, and speaker-diarization systems.</li>
 
-<div class="card">
-<h3>🎙 Text To Speech</h3>
-<p>Scalable voice synthesis service infrastructure.</p>
-</div>
+<li>Designed scalable database schemas and optimized data access patterns for AI workloads.</li>
 
-<div class="card">
-<h3>🎧 Automatic Speech Recognition</h3>
-<p>Speech processing and transcription workflows.</p>
-</div>
+<li>Architected asynchronous processing pipelines using Celery and Redis for long-running AI inference tasks.</li>
 
-<div class="card">
-<h3>📄 OCR</h3>
-<p>Document extraction and text-processing pipelines.</p>
-</div>
+<li>Applied clean architecture principles to improve maintainability and scalability.</li>
 
-<div class="card">
-<h3>🖼 Image Processing</h3>
-<p>Backend services for image analysis and automation.</p>
-</div>
+<li>Implemented monitoring, validation, logging, and error-handling mechanisms for production environments.</li>
 
-<div class="card">
-<h3>👥 Speaker Diarization</h3>
-<p>Multi-speaker segmentation and identification pipelines.</p>
-</div>
+<li>Collaborated with AI engineers, frontend developers, and product teams to deliver end-to-end features.</li>
 
-</div>
+<li>Participated in backend architecture discussions and technical decision-making.</li>
+</ul>
 
 </section>
 
-<section class="fade">
+<section>
 
-<h2 class="section-title">Technology Stack</h2>
+<h2>Technical Skills</h2>
 
 <div class="skills">
 
-<div class="skill">Python</div>
-<div class="skill">Django</div>
-<div class="skill">Django REST Framework</div>
-<div class="skill">FastAPI</div>
-<div class="skill">PostgreSQL</div>
-<div class="skill">Redis</div>
-<div class="skill">Celery</div>
-<div class="skill">Docker</div>
-<div class="skill">Linux</div>
-<div class="skill">Git</div>
-<div class="skill">REST APIs</div>
-<div class="skill">System Design</div>
-<div class="skill">Database Design</div>
-<div class="skill">Clean Architecture</div>
+<span class="skill">Python</span> <span class="skill">Django</span> <span class="skill">Django REST Framework</span> <span class="skill">FastAPI</span> <span class="skill">PostgreSQL</span> <span class="skill">Redis</span> <span class="skill">Celery</span> <span class="skill">Docker</span> <span class="skill">Linux</span> <span class="skill">Git</span> <span class="skill">REST APIs</span> <span class="skill">System Design</span> <span class="skill">Clean Architecture</span> <span class="skill">LLMs</span> <span class="skill">OCR</span> <span class="skill">ASR</span> <span class="skill">TTS</span> <span class="skill">Speaker Diarization</span>
 
 </div>
 
 </section>
 
-<section class="fade">
+<section>
 
-<h2 class="section-title">Education</h2>
+<h2>Education</h2>
 
-<div class="card">
 <h3>B.Sc. Software Engineering</h3>
-<p>Imam Reza International University</p>
-<p style="margin-top:8px">2022 — 2026</p>
-</div>
+<p class="company">Imam Reza International University • 2022 – 2026</p>
 
 </section>
 
-<section class="fade">
+<section>
 
-<h2 class="section-title">Engineering Philosophy</h2>
+<h2>Interests</h2>
 
-<div class="card">
 <p>
-Good software is not only about making things work.
-
-It is about building systems that remain understandable, maintainable, and reliable long after deployment.
-
-I value clean architecture, thoughtful abstractions, and continuous learning through documentation, experimentation, and source code exploration.
-
+AI Infrastructure, Backend Architecture, Distributed Systems,
+Database Design, Open Source Software, System Design,
+and learning technologies through source code and official documentation.
 </p>
-</div>
 
 </section>
 
 <footer>
-Built with Python, curiosity, and a lot of documentation reading.
+© 2026 Mahsa Mirarab
 </footer>
 
 </div>
-
-<script>
-
-function toggleTheme(){
-    document.body.classList.toggle('light');
-}
-
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-document.querySelectorAll('.fade').forEach(el=>{
-    observer.observe(el);
-});
-
-</script>
 
 </body>
 </html>
